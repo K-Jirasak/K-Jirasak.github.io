@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Security Specialties</title>
+  <title>[CTF Name] Writeup</title>
   <style>
-    body {
+body {
   font-family: sans-serif;
   margin: 0;
   padding: 2rem;
-  color: #333;
+  color: #333; /* Adjust text color as needed */
 }
 
 header {
@@ -18,49 +18,44 @@ header {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-p {
-  line-height: 1.5;
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.security-areas {
-  width: 80%;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.areas-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-  justify-content: space-between; /* Evenly distribute items */
-  gap: 1rem; /* Add spacing between items */
-}
-
-.area {
-  text-decoration: none; /* Remove underline from links */
-  background-color: #f2f2f2;
+.ctf-info,
+.challenge {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out; /* Add smooth hover effect */
-  width: calc(47% - 1rem); /* Adjust width for 3 columns */
-  color: #333;
+  margin-bottom: 2rem;
 }
 
-.area:hover {
-  background-color: #e0e0e0;
+.ctf-info ul,
+.challenge .challenge-content {
+  list-style: none;
+  padding: 0;
 }
 
-h3 {
+.ctf-info li,
+.challenge .challenge-content p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.challenge h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+}
+
+.code-block {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 5px;
+  font-family: monospace;
 }
 
 footer {
@@ -83,42 +78,37 @@ footer {
 .back-to-index-btn:hover {
   background-color: #444;
 }
-
-  </style>
-
-
+</style>
 </head>
 <body>
   <header>
-    <h1>Unveiling the World of Cybersecurity</h1>
+    <h1>CTF Writeups</h1>
+    <h2>[CTF Name] - [Date]</h2>
   </header>
   <main>
-    <section class="security-areas">
-      <h2>Dive into Different Security Domains</h2>
-      <p>Cybersecurity is a vast field, but here are some key areas to explore your interests and expertise.</p>
-      <div class="areas-container">
-        <a href="#" class="area">
-          <h3>Web Application Security</h3>
-          <p>Protect websites and web applications from vulnerabilities and attacks.</p>
-        </a>
-        <a href="#" class="area">
-          <h3>Network Security</h3>
-          <p>Safeguard computer networks and data from unauthorized access.</p>
-        </a>
-        <a href="forensic.html" class="area">
-          <h3>Forensics & Incident Response</h3>
-          <p>Investigate cybercrime incidents and collect evidence for recovery.</p>
-          <p>Somethin in side</p>
-          <p>Ghost</p>
-        </a>
-        <a href="#" class="area">
-          <h3>Cryptography</h3>
-          <p>Learn the art of securing information using encryption and decryption techniques.</p>
-        </a>
-        <a href="#" class="area">
-          <h3>Misc & Malware Analysis</h3>
-          <p>Explore diverse security topics and delve into the world of malware analysis.</p>
-        </a>
+    <section class="ctf-info">
+      <h2>CTF Information</h2>
+      <ul>
+        <li><b>Platform:</b> [Platform Name/Link (if applicable)]</li>
+        <li><b>Difficulty:</b> [Easy/Medium/Hard]</li>
+        <li><b>Author(s):</b> [Your Name(s) or Team Name]</li>
+      </ul>
+    </section>
+    <section class="challenge">
+      <h2>Challenge: [Challenge Name]</h2>
+      <div class="challenge-content">
+        <h3>Description</h3>
+        <p>[Describe the challenge objective.]</p>
+        <h3>Initial Approach</h3>
+        <p>[Explain your initial steps in tackling the challenge.]</p>
+        <h3>Solution</h3>
+        <p>[Explain the solution steps you implemented. Include details like tools and techniques used.]</p>
+        <div class="code-block">
+          </div>
+        <h3>Hints (Optional)</h3>
+        <p>[Provide hints or alternative approaches to the challenge if applicable.]</p>
+        <h3>Lessons Learned</h3>
+        <p>[Share your takeaways from this challenge.]</p>
       </div>
     </section>
   </main>
