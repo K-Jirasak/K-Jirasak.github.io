@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[CTF Name] Writeup</title>
+  <style>
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  color: #333; /* Adjust text color as needed */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.ctf-info,
+.challenge {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.ctf-info ul,
+.challenge .challenge-content {
+  list-style: none;
+  padding: 0;
+}
+
+.ctf-info li,
+.challenge .challenge-content p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.challenge h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.code-block {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>CTF Writeups</h1>
+    <h2>[CTF Name] - [Date]</h2>
+  </header>
+  <main>
+    <section class="ctf-info">
+      <h2>CTF Information</h2>
+      <ul>
+        <li><b>Platform:</b> [Platform Name/Link (if applicable)]</li>
+        <li><b>Difficulty:</b> [Easy/Medium/Hard]</li>
+        <li><b>Author(s):</b> [Your Name(s) or Team Name]</li>
+      </ul>
+    </section>
+    <section class="challenge">
+      <h2>Challenge: [Challenge Name]</h2>
+      <div class="challenge-content">
+        <h3>Description</h3>
+        <p>[Describe the challenge objective.]</p>
+        <h3>Initial Approach</h3>
+        <p>[Explain your initial steps in tackling the challenge.]</p>
+        <h3>Solution</h3>
+        <p>[Explain the solution steps you implemented. Include details like tools and techniques used.]</p>
+        <div class="code-block">
+          </div>
+        <h3>Hints (Optional)</h3>
+        <p>[Provide hints or alternative approaches to the challenge if applicable.]</p>
+        <h3>Lessons Learned</h3>
+        <p>[Share your takeaways from this challenge.]</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
