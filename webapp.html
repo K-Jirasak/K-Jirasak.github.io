@@ -3,106 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delving into Malware Analysis</title>
-  <link rel="stylesheet" href="style.css">
+  <title>[CTF Name] Writeup</title>
+ 
+<style>
+  body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  color: #333; /* Adjust text color as needed */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.ctf-info,
+.challenges {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.ctf-info ul,
+.challenges ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ctf-info li,
+.challenges li {
+  margin-bottom: 0.5rem;
+}
+
+.challenges a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.challenges a:hover {
+  color: #333;
+}
+
+.challenge-writeup {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+</style>
+
+  
 </head>
 <body>
   <header>
-    <h1>Malware Analysis</h1>
+    <h1>CTF Writeups</h1>
+    <h2>[CTF Name] - [Date]</h2>
   </header>
   <main>
-    <section class="intro">
-      <h2>What is Malware Analysis?</h2>
-      <p>
-        Malware analysis is the process of examining malicious software (malware) to understand its behavior, capabilities, and how to detect and prevent it. 
-        This field plays a crucial role in cybersecurity by helping security professionals stay ahead of evolving threats.
-      </p>
-    </section>
-    <section class="analysis-process">
-      <h2>The Analysis Process</h2>
+    <section class="ctf-info">
+      <h2>CTF Information</h2>
       <ul>
-        <li><b>Initial Analysis:</b> Gathering basic information about the malware, such as its file type, size, and origin.</li>
-        <li><b>Static Analysis:</b> Examining the malware code without executing it to identify suspicious elements.</li>
-        <li><b>Dynamic Analysis:</b> Running the malware in a safe environment to observe its behavior and interactions with the system.</li>
-        <li><b>Reversing:</b> Understanding the code and functionality of the malware in detail.</li>
-        <li><b>Reporting & Sharing:</b> Documenting findings and sharing them with the cybersecurity community to improve detection and mitigation strategies.</li>
+        <li><b>Platform:</b> [Platform Name/Link (if applicable)]</li>
+        <li><b>Difficulty:</b> [Easy/Medium/Hard]</li>
+        <li><b>Author(s):</b> [Your Name(s) or Team Name]</li>
       </ul>
     </section>
-    <section class="resources">
-      <h2>Learning Resources</h2>
+    <section class="challenges">
+      <h2>Challenges</h2>
       <ul>
-        <li><a href="#">Free Malware Analysis Training Courses</a></li>
-        <li><a href="#">Online Malware Analysis Sandboxes</a></li>
-        <li><a href="#">Books and Tutorials on Malware Analysis</a></li>
-      </ul>
+        <li>
+          <a href="#challenge1">Challenge 1: [Challenge Name]</a>
+        </li>
+        <li>
+          <a href="#challenge2">Challenge 2: [Challenge Name]</a>
+        </li>
+        </ul>
     </section>
-    <section class="resources">
-Web Application
-1. Book Shop
-1. ข้อนี้ ไม่ได้ทำการ Capture โจทย์ไว้ แต่เมื่อทำการกด Link จะแสดงหน้า  Book shop โดยมีช่อง Input ให้กรอกค่า Book ID เพื่อคัดกรองหนังสือที่ต้องการ 
- 
-2. จากการทดสอบ โดยการใส่อักขระ ' ที่ช่อง BookID จะปรากฏ Error ทำให้ทราบว่ามีช่องโหว่ SQL Injection (ลืม Capture รูปไว้ T_T)
-3. ใช้เครื่องมือ Sqlmap โดยใช้คำสั่ง 'sqlmap -u "http://35.186.158.123/" --data "BookID=1" --method POST --dbs' จะได้ รายการฐานข้อมูล (DB) ออกมา และพบว่ามี DB ที่น่าสนใจ ชื่อ secret
-
- 
-
- 
-4. ทำการ Dump ข้อมูลจากตารางที่ชื่อ Flag โดยใช้คำสั่ง 'sqlmap -u "http://35.186.158.123/" --data "BookID=1" --method POST --dump -T flag -D secret' ก็จะได้คำตอบ
-
- 
-ผลลัพธ์
- 
-⦁	2. Information Leakage
- 1. โจทย์ 
- 
-2. เมื่อเข้าไปที่ 34.87.128.89 จะปรากฏหน้า Web Site ซึ่งเห็นสัญลักษณ์ของ CMS Joomla จึงทำการค้นหาข้อมูล พบว่า CASSIOPEIA เป็น Frontend template ของ Joomla (https://cassiopeia.joomla.com/)
-หน้า Web site
- 
-3. ใช้เครื่องมือ Joomscan จะได้ข้อมูล Version และหน้า Login Admin page
-ผลลัพธ์
- 
-4. ทำการหาข้อมูลพบว่า Joomla version น้อยกว่าหรือเท่ากับ 4.2.7 มีช่องโหว่ Authen Bypass ส่งผลให้ข้อมูลรั่วไหล (GitHub - Pushkarup/CVE-2023-23752: Exploit for CVE-2023-23752 (4.0.0 <= Joomla <= 4.2.7).)
-CVE-2023-23752
- 
-5. ทดสอบโจมตีช่องโหว่ดังกล่าว จะได้ข้อมูลสำคัญออกมา
-คำสั่ง
- 
-ข้อมูลสำคัญที่ได้รับ
- 
-6. ทดสอบเชื่อมต่อไปยัง DB ด้วยข้อมูลข้างต้น และทำการแสดง DB ออกมา *(ลองเลือก DB Flag และทำการเรียกดูข้อมูลแล้วไม่พบอะไร)
-รายการฐานข้อมูล (DB)
- 
-7. จึงเปลี่ยนมาเลือก joomla_400 และทำการแสดงตารางออกมาดู และเลือกแสดงข้อมูลตาราง secplayground_user จะพบ username และ password ของ ADMIN
-username และ password ของ ADMIN
- 
-8. นำ Password ทีได้ไปเทียบค่า hash ออนไลน์ (https://crackstation.net/) จะได้ผลลัพธ์ คือ qweas
-ผลลัพธ์
- 
-9. นำ username และ plain text password ที่ได้มาทำการ Login ที่หน้า Admin Page
-Log in สำเร็จ
- 
-10. จึงทำการหาข้อมูลที่ https://vulncheck.com/blog/joomla-for-rce  พบว่าสามารถแก้ไขหน้า Template เพื่อฝั่ง Code อันตรายลงไปได้ โดยจะฝั่ง PHP Code เพื่อใช้รับคำสั่ง นำไปประมวลผลและแสดงค่ากลับมา
-ฝั่ง code ลงไป
- 
-11. ทดสอบด้วยคำสั่ง ls
-คำสั่ง
- 
-ผลลัพธ์
- 
-12. ใช้คสั่ง ls เพื่อแสดงไฟล์ที่ path /tmp จะพบกับไฟล์ flag.txt
-คำสั่ง
- 
-ผลลัพธ์
- 
-13. ใช้คำสั่ง cat เพื่ออ่านไฟล์ flag.txt
-คำสั่ง
- 
-ผลลัพธ์
- 
-
-</section>
-    
-  </main>
+    <section class="challenge-writeup" id="challenge1">
+      <h3>Challenge 1: [Challenge Name]</h3>
+      <p>[Describe the challenge objective and initial approach.]</p>
+      <h4>Solution</h4>
+      <p>[Explain the steps taken to solve the challenge, including tools, techniques, and insights gained.]</p>
+      <h4>Hints</h4>
+      <p>[Provide hints or alternative approaches to the challenge (if applicable).]</
+      <h4>Lessons Learned</h4>
+      <p>[Share key takeaways or valuable lessons learned from this challenge.]</p>
+    </section>
+    <section class="challenge-writeup" id="challenge2">
+      <h3>Challenge 2: [Challenge Name]</h3>
+      </section>
+    </main>
 </body>
 </html>
-
