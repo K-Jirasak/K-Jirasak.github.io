@@ -1,67 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Index</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 80%;
-            max-width: 600px;
-            margin: 20px 0;
-        }
-        .box {
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 10px;
-            width: 45%;
-            text-align: center;
-        }
-        .box h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[CTF Name] Writeup</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+      color: #333; /* Adjust text color as needed */
+      background-color: #eee; /* Light background for better readability */
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #007bff; /* Blue heading for emphasis */
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .ctf-info,
+    .challenges {
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      background-color: #fff; /* White background for sections */
+    }
+
+    .ctf-info ul,
+    .challenges ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ctf-info li,
+    .challenges li {
+      margin-bottom: 0.5rem;
+    }
+
+    .challenges a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .challenges a:hover {
+      color: #333;
+    }
+
+    .challenge-writeup {
+      margin-bottom: 2rem;
+      border: 1px solid #ddd; /* Light border for separation */
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%; /* Images scale to fit content area */
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #aaa;
+    }
+
+    .back-to-index-btn {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none; /* Remove underline */
+      transition: all 0.2s ease-in-out;
+    }
+
+    .back-to-index-btn:hover {
+      background-color: #444;
+    }
+
+  #scrollToTopBtn {
+  position: fixed; /* Keep the button fixed on scroll */
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  display: none; /* Hide the button initially */
+  z-index: 99; /* Ensure the button stays on top */
+  border: none;
+  outline: none;
+  background-color: #333; /* Adjust color as needed */
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out; /* Smooth appearance on scroll */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #444; /* Adjust hover color as needed */
+}
+
+</style>
+
 </head>
 <body>
-    <h1>Cybersecurity Index</h1>
-    <div class="container">
-        <div class="box">
-            <h2>Network Security</h2>
-            <p>Explore topics related to securing computer networks from unauthorized access, use, disclosure, disruption, modification, or destruction.</p>
-        </div>
-        <div class="box">
-            <h2>Forensic Analysis</h2>
-            <p>Learn about the process of collecting, analyzing, and interpreting digital evidence to uncover cybercrime.</p>
-        </div>
-        <div class="box">
-            <h2>Web Application Security</h2>
-            <p>Delve into methods for protecting web applications from vulnerabilities that can be exploited by attackers.</p>
-        </div>
-        <div class="box">
-            <h2>Malware Analysis</h2>
-            <p>Discover techniques for investigating and understanding malicious software to mitigate its impact.</p>
-        </div>
-        <div class="box">
-            <h2>Misc</h2>
-            <p>Find resources on various other cybersecurity topics that don't fit neatly into the other categories.</p>
-        </div>
-    </div>
-</body>
-</html>
+
+    <header>
+      <h1>Digital Forensic Writeup</h1>
+      <h2>[CTF Cybersplash] - [13-14 April 2024]</h2>
+      
+    </header>
+  
+    <main>
+      <button id="scrollToTopBtn" title="Go to Top">Go to Top</button>
+      <!-- <section class="ctf-info">
+        <h2>CTF Information</h2>
+        <ul>
+          <li><b>Platform:</b> [Secplay Ground]</li>
+          <li><b>Difficulty:</b> </li>
+        </ul>
+      </section> -->
+  
+      <section class="challenges">
+        <h2>Challenges Index</h2>
+        <ul>
+          <li>
+            <a href="#challenge1">Challenge 1: [Something secret inside] [Easy]</a>
+          </li>
+          <li>
+            <a href="#challenge2">Challenge 2: [Out Put] [Meduim]</a>
+          </li>
+          </ul>
+          <a href="index.html" class="back-to-index-btn">Back to Home</a>
+      </section>
+  
+      <section class="challenge-writeup" id="challenge1">
+        
+        <h3>Challenge 1: [Something secret inside] [Easy]</h3>
+        <p> Your task is to analyze the memory dump, extract the secret message and revealing the flag. </p>
+        
+        <h4>Solution</h4>
+        <p>1. โจทย์</p>
+        <img src="images/forensic/smbh/sm1.png"/>
+  
+        <p>2. ทำการ Downlaod ไฟล์ และ Unzip จะได้ไฟล์ที่เป็น memory dump ชื่อ "Something_secret_inside.dmp"   </p>
+        <img src="images/forensic/smbh/sm2.png"/>
+
+  
+        <p>3. ใช้เครื่องมือ Magnet Axois ในการวิเคราะห์ และพบว่ามีไฟล์ที่น่าสนใจ ชื่อ secret</p>
+        <img src="images/forensic/smbh/sm3.png"/>
+  
+        <p>4. ใช้ Volatility ในการ scanfiles และ grep เฉพาพะคำว่า secret จะทำให้ทราบ address จากนั้นจึงทำการ dumpfile ออกมาจาก address ที่พบ </p>
+        <img src="images/forensic/smbh/sm4.png"/>    
+
+        <p>5. อ่านไฟล์ที่ทำการ dumpfile ออกมา จะได้ base64 และทำการ decode ก็จะได้คำตอบ (flag) </p>
+        <img src="images/forensic/smbh/sm5.png"/>   
+
+        </section>
+  
+        <section class="challenge-writeup" id="challenge2">
+        
+          <h3>Challenge 2: [Out Put] [Meduim]</h3>
+          <p> - </p>
+          
+          <h4>Solution</h4>
+          <p>1. ไม่ได้ capture โจทย์ไว้ แต่เนื้อหาประมาณว่า มีคนพยายามเข้ารหัสไฟล์บน PC โดยการใช้ XOR และให้หา flag จากไฟล์ที่ดาวน์โหลดมา</p>
+    
+          <p>2. ไฟล์ที่ดาวน์โหลดมาเป็น memory dump ชื่อไฟล์ JOHN-PC-20240402-164218.dmp</p>
+
+          <p>3. ลองใช้ Volatility ดูพวก process, command line แล้วไม่เห็นอะไรผิดปกติ เลยลองใช้ strings เอาพวกที่เป็น text ออกมา และลองหาคำว่า XOR จากคำอธิบายโจทย์ พบว่ามีฟังก์ชันน่าสนใจ ชื่อ xor_encrypt </p>
+          <img src="images/forensic/output/ot1.png"/>
+
+          <p>4. เลยลองเข้าไปดูในไฟล์ strings.txt โดยใช้ vi แล้ว search หาคำว่า xor_encrypt พบว่าบรรทัดก่อนหน้ามีตัวแปร flag define เอาไว้ </p>
+          <img src="images/forensic/output/ot2.png"/>    
+  
+        </section>
+
+      </main>
+      <footer>
+        <p>&copy; 2024@Jirasak Kunsilarit</p>
+      </footer>  
+
+      <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      
+        window.onscroll = function() {
+          // Show button when scrolled down more than 20px
+          if (window.pageYOffset > 20) {
+            scrollToTopBtn.style.display = "block";
+          } else {
+            scrollToTopBtn.style.display = "none";
+          }
+        };
+      
+        scrollToTopBtn.addEventListener("click", function() {
+          // Scroll to the top of the page smoothly
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      </script>
+      
+  </body>
+  </html>
+  

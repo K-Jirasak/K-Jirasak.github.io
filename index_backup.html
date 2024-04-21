@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to My Tech Interests!</title>
+  <title>Explore Security Specialties</title>
   <style>
-body {
+    body {
   font-family: sans-serif;
   margin: 0;
   padding: 2rem;
-  /* background-color: black;
-  color: white; */
+  color: #333;
 }
 
 header {
@@ -22,102 +21,131 @@ h1 {
   font-size: 2rem;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap; /* Wrap sections for responsive layout */
-  justify-content: space-between; /* Evenly distribute sections */
-  width: 80%;
+p {
+  line-height: 1.5;
 }
 
-section {
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.security-areas {
+  width: 80%;
+  text-align: center;
   margin-bottom: 2rem;
+}
+
+.areas-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  justify-content: space-between; /* Evenly distribute items */
+  gap: 1rem; /* Add spacing between items */
+}
+
+.area {
+  text-decoration: none; /* Remove underline from links */
+  background-color: #f2f2f2;
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  width: calc(33% - 1.5rem); /* Adjust width for 3 sections per row */
-}
-
-h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
+  transition: all 0.2s ease-in-out; /* Add smooth hover effect */
+  width: calc(47% - 1rem); /* Adjust width for 3 columns */
   color: #333;
 }
 
+.area:hover {
+  background-color: #e0e0e0;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #aaa;
+}
+
+.back-to-index-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  transition: all 0.2s ease-in-out;
+}
+
+.back-to-index-btn:hover {
+  background-color: #444;
+}
+
   </style>
+
+
 </head>
 <body>
-  <header class="navigation">
-    <h1>My Tech Interests</h1>
-    <!-- <nav class="nav-links">
-      <a href="webapp.html">Web Application</a>
-      <a href="networksec">Network Security</a>
-      <a href="#">Forensics</a>
-      <a href="#">Cryptography</a>
-      <a href="#">Misc</a>
-      <a href="#">Malware Analysis</a>
-    </nav> -->
+  <header>
+    <h1>Unveiling the World of Cybersecurity</h1>
   </header>
-  
-  <section>
-    <h2>Web Application</h2>
-    <p>Explore the world of web development and learn how to create interactive web applications.</p>
-    <ul>
-    <li><a href="webapp.html">Web Application</a></li>
-    <li><a href="webapp.html">Web Application</a></li>
-    </ul>
-  </section>
-  
-  <section>
-    <h2>Network Security</h2>
-    <p>Delve into the world of network security and understand how to protect your data online.</p>
-    <ul>
-      <li><a href="networksec.html">Network Security</a></li>
-        <li> <a href="networksec.html">Network Security</a></li>
-  </ul>
-  </section>
-  
-  <section>
-    <h2>Forensics</h2>
-    <p>Learn about digital forensics and how to investigate cybercrime.</p>
-    <ul>
-      <li><a href="forensic.html">Forensic</a></li>
-        <li> <a href="forensic.html">Forensic</a></li>
-  </ul>
-  </section>
-  <section>
-    <h2>Cryptography</h2>
-    <p>Uncover the secrets of cryptography and explore its applications in data security.</p>
-  </section>
-  <section>
-    <h2>Misc</h2>
-    <p>Discover other interesting areas within the tech field that pique your curiosity.</p>
-    <ul>
-      <li><a href="misc.html">Misc</a></li>
-        <li> <a href="misc.html">Misc</a></li>
-        <li><a href="misc.html">Misc</a></li>
-        <li> <a href="misc.html">Misc</a></li>
-  </ul>
-  </section>
-  <section>
-    <h2>Malware Analysis</h2>    
-    <p>Learn how to identify and analyze malicious software to protect yourself from cyber threats.</p>
-  </section>
+  <main>
+    <section class="security-areas">
+      <h2>Dive into Different Security Domains</h2>
+      <p>Cybersecurity is a vast field, but here are some key areas to explore your interests and expertise.</p>
+      <div class="areas-container">
+        
+        <a href="webapp.html" class="area">
+          <h3>Web Application Security</h3>
+          <p>Book Shop</p>
+          <p>Information Leakage</p>
+        </a>
+
+        <a href="misc.html" class="area">
+            <h3>Misc</h3>
+            <p>- Not Cloud</p>
+            <p>- APT</p>
+            <p>- Echoes of the playground</p>
+            <p>- Hello World</p>
+        </a>
+
+        <a href="steg.html" class="area">
+            <h3>Cryptography</h3>
+            <p>Somethinf behind</p>
+        </a>
+
+        <a href="networksec.html" class="area">
+          <h3>Network Security</h3>
+          <p>- Just another tunneling</p>
+        </a>
+        
+        <a href="forensic.html" class="area">
+          <h3>Digital Forensics</h3>
+          <p>- Somethin in side</p>
+          <p>- Output</p>
+          <p>- Ghost</p>
+        </a>
+        
+        <a href="forensic.html" class="area">
+            <h3>Malware Analysis_1</h3>
+            <p>- 1</p>
+            <p>- 2</p>
+        </a>
+
+        <a href="forensic.html" class="area">
+            <h3>Malware Analysis_2</h3>
+            <p>- 1</p>
+            <p>- 2</p>
+        </a>
+     
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Your Name/Organization</p>
+  </footer>  
 </body>
 </html>
