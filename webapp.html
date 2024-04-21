@@ -62,6 +62,7 @@
       margin-bottom: 2rem;
       border: 1px solid #ddd; /* Light border for separation */
       padding: 1rem;
+      background-color: #fff;
     }
 
     h3 {
@@ -163,7 +164,7 @@
         <p>1. ข้อนี้ ไม่ได้ทำการ Capture โจทย์ไว้ แต่เมื่อทำการกด Link จะแสดงหน้า  Book shop โดยมีช่อง Input ให้กรอกค่า Book ID เพื่อคัดกรองหนังสือที่ต้องการ</p>
         <img src="images/web/bookshop/wb1.png"/>
   
-        <p>2. 2. จากการทดสอบ โดยการใส่อักขระ ' ที่ช่อง BookID จะปรากฏ Error ทำให้ทราบว่ามีช่องโหว่ SQL Injection (ลืม Capture รูปไว้ T_T) </p>
+        <p>2. จากการทดสอบ โดยการใส่อักขระ ' ที่ช่อง BookID จะปรากฏ Error ทำให้ทราบว่ามีช่องโหว่ SQL Injection (ลืม Capture รูปไว้ T_T) </p>
   
         <p>3. ใช้เครื่องมือ Sqlmap โดยใช้คำสั่ง 'sqlmap -u "http://35.186.158.123/" --data "BookID=1" --method POST --dbs' จะได้ รายการฐานข้อมูล (DB) ออกมา และพบว่ามี DB ที่น่าสนใจ ชื่อ secret</p>
         <img src="images/web/bookshop/wb2.png"/>
