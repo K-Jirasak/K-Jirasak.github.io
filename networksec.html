@@ -133,22 +133,28 @@
   
       <section class="challenge-writeup" id="challenge1">
         
-        <h3>Challenge 1: [Just another tunneling]</h3>
+        <h3>Challenge 1: [Just another tunneling][Easy]</h3>
         <p> There were some secret message inside, please find it. </p>
         h Network Security 
         <h4>Solution</h4>
         <p>1. โจทย์ </p>
-        <img src="images/cryptography/crypt_1.png" width="70%" height="70%"/>
+        <img src="images/network/net1.png"/>
   
         <p>2. Download และทำการ Unzip จะได้ไฟล์ pcap ชื่อ "ICMP" </p>
-        <img src="images/cryptography/crypt_2.png"/>
+        <img src="images/network/net2.png"/>
   
-        <p>3. นำรูปภาพที่ได้ไป Upload ที่ https://futureboy.us/stegano/decinput.html เพื่อวิเคราะห์ให้หาข้อความที่ซ่อนไว้ </p>
-        <img src="images/cryptography/crypt_3.png" width="70%" height="70%"/>
+        <p>3. เปิดด้วยโปรแกรม wireshark และเข้าไปที่ Menu > Statistics > Conversation เพื่อดูการสื่อสารระหว่าง ต้นทางและปลายทาง </p>
+        <img src="images/network/net3.png" width="70%" height="70%"/>
   
-        <p>4. จะได้คำตอบ (Flag) ออกมา </p>
-        <img src="images/cryptography/crypt_4.png" />
+        <p>4. จะพบกับหมายเลข IP Address ที่น่าสนใจ คือ "1.1.1.1" </p>
+        <img src="images/network/net4.png" />
   
+        <p>5. จึงทำการคัดกรองด้วย Protocol ICMP และ IP address ที่น่าสนใจ โดยใช้คำสั่ง "icmp and ip.addr==1.1.1.1" </p>
+        <img src="images/network/net5.png" />
+
+        <p>6. จะได้คำตอบ (Flag) ออกมา </p>
+        <img src="images/network/net6.png" />
+
         </section>
   
       </main>
